@@ -1,0 +1,30 @@
+Denver Chernin
+Program: webproxy.c 
+
+Purpose:
+
+Create web proxy for HTTP GET requests with working page cache
+My program takes a request from the client (Firefox, Chrome) and checks its own
+internal cache and proceeds to send that if the files exist. If the files do 
+not exist the web proxy goes to an HTTP server over port 80 (if not specified)
+and retrieves and information and caches it for next time. 
+
+How to run:
+
+1) make clean --> no older versions of compiled code in folder
+2) make --> creates new compiled executable
+3) ./webproxy <port> --> starts webproxy of port # supplied
+4) Test
+	1) Option 1: telnet
+		You can use telnet to test the functionality of the webserver
+		1) telnet localhost <port> 
+		   GET http://www.google.com HTTP/1.0
+		   This should return the header files for google.com
+	2) Option 2: browser
+		You can use firefox or chome as long as the proxy server is 
+		set up correctly on the browser
+		1) Set up proxy on browser
+		2) Run proxy on same port
+		3) netsys.cs.colorado.edu
+			You can use in browser inspection of network for 
+			indepth information about each packet

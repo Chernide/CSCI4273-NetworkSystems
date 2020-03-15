@@ -1,0 +1,28 @@
+Denver Chernin
+Program: dfc.c/dfs.c 
+
+Purpose:
+
+Create a distributed file system that has reliability through redundancy. This program works as long as files size/4 < 8192 and does not work with images, but works with text files. These servers are not robust and will break if a server crashes midrun. Other than that LIST,PUT,GET all work will full functionality. 
+
+*GET command files are written to /Gotten_files directory within client/server folder*
+
+How to run:
+
+1) make clean --> Clears all user files and directories and removes old compiled code
+2) make --> creates new compiled executable
+3) ./dfc dfc.conf --> starts client for the user defined in the dfc.conf
+4) Run Servers
+	./dfs <Server dir> <port #>
+	./dfs <Server dir> <port #>
+	./dfs <Server dir> <port #>
+	./dfs <Server dir> <port #>
+	*Run all four with dirrent ports and directorys (/DFS[1,2,3,4])
+4) Test
+	1) PUT foo1.txt
+	2) PUT bar.txt
+	3) LIST --> Shows both file names without [incomplete]
+	4) Go delete all .bar.txt.1 pieces
+	5) LIST --> will show bar.txt [incomplete]
+	6) GET foo1.txt
+	7) Check /Gotten_files/ for foo1.txt file.

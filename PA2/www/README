@@ -1,0 +1,15 @@
+Program: serv.c 
+
+Purpose: 
+
+To create a HTTP-based web server that handles multiple simultaneous requests from users
+
+My program takes a request from a client and sends the processed results back ot the client as a response as a command. It will parse the request down into multiple parts including the HTTP type, content type, and file. My code will then read and packetize the data and send it back to the client. 
+
+
+How to run:
+
+1) make clean --> ensures there are no compiled versions in the folder
+2) make --> creates a new executable 
+3) ./server <port #> --> starts server up on port 8888 
+4) localhost:8888/ OR localhost:8888/inside/ 

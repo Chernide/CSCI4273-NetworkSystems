@@ -1,0 +1,30 @@
+Files needed:
+-------------
+client/uftp_client.c 
+client/makefile 
+
+server/uftp_server.c 
+server/makefile 
+
+
+What this program does:
+-----------------------
+This C program creates a socket between a server and a client and provides 4
+command functionality. 
+
+Commands:
+	get [file_name]: This will create the file that exists on the server side in the client directory and write the same data to it 
+	put [file_name]: This will create the file that exists on the client side in the server direcotry and write the same data to it 
+	delete [file_name]: This will delete the file provided on the server side
+	ls: This will list out the current files and directories that exist on the server side
+
+
+How to run:
+-----------
+Run these commands in the directories of client and server 
+
+make 
+./client <IP Address> <Port> 
+
+make 
+./server <Port> 

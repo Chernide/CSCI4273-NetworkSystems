@@ -1,0 +1,6 @@
+netsys.cs.colorado.edu,128.138.202.178
+ajax.googleapis.com,172.217.12.10
+detectportal.firefox.com,129.19.64.232
+10.0.0.1,10.0.0.1
+gle.com,69.172.201.153
+1,0.0.0.1
